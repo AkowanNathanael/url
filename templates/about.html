@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %} about {% endblock %}
+
+{% block body %} 
+<div class="divider "></div>
+
+
+
+
+<div id="fluid-container" class="fluid-container" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <img style="width: 30%; height:3ovh ;border-radius: 20px 0 70px 50px;" src="{{url_for('static', filename='kim.png')}}" alt="image">
+    <p class="lead bg-danger text-light nb p-2">NB: To enjoy this api use  only long urls</p>
+   <p  id="odd"  style="border-radius: 0 30px 0 40px; box-shadow: 4px 34px 50px;background-color: white;text-align: center;" class="lead  mt-5 mx-2 pt-5 px-4">
+    Hi! I am Nathanael Alimsiwen Akowan, a passionate and a pragmatic web developer, with less than 1 year of experience.
+    I am a Data science , IoT, ML and a software engineer enthusiast. I am a student of University For Development 
+    Studies Navrongo campus aka (C.K.T University of Technology and Applied Sciences, a level 200 student. <br>
+    <i><b>The reason why i developed this api was to help myself and others shorten long urls such as google forms links etc</b></i>
+    <br/>
+    I love solving problems with lines of code, I like to involve myself in Tech activities where ever I find myself my 
+    self. I am always ready to learn new technologies that are evolving.
+    
+   
+   </p>
+
+</div>
+
+
+
+
+
+{% endblock %}

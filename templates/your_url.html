@@ -1,0 +1,16 @@
+
+{% extends "base.html" %} 
+{% block title %} shorten url {% endblock %}
+ {% block body %} 
+ {{super()}}
+<h1 class="p-4 m-4 text-center"> Shorten page</h1>
+<div class="divider "></div>
+
+<form action="" class=" radius  " method="GET">
+    <p class="f"> Send message to us</p>
+    <input class="form-control border border-dark mt-3"  placeholder="" type="text" value="{{ url_for('redirect_to_url', code=code, _external=True) }}" name="url" id="url" readonly>
+    <input class="form-control border-dark  mt-3"  type="button" value="copy" name="" id="copy" required>
+
+</form>
+
+{% endblock %}

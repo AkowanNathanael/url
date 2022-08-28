@@ -1,0 +1,30 @@
+{%  extends "base.html"  %}
+
+{% block title %} home {% endblock %}
+
+{% block body %} 
+<div class="divider "></div>
+
+    {% with  messages=get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-secondary" id="alert">
+         <span style="color: red;"> {{message}}</span>    <button style="float: right;" class="btn btn-danger" id="close"> x</button>
+    </div>
+         {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <p class="lead bg-danger text-light p-2 nb text-center border rounded-4">NB: To enjoy this api use  only long urls</p>
+<form action="/your-url" class=" radius  " method="POST">
+    <p class="f"> Enter a long url to make it short </p>
+    <input class="form-control border"  placeholder="enter shortname(alias) eg kim " type="text" name="code" id="" required>
+    <input class="form-control border"  placeholder="enter url https://google.com" type="url" name="url" id="" required>
+    <input class="form-control border "   type="submit" value="Shorten" name="" id="" required>
+
+</form>
+
+
+{% endblock %}
+
+
